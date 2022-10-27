@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
+import Categories from "./Categories"
 import {
   AppBar,
   Button,
@@ -26,7 +28,7 @@ const Navbar = () => {
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-                e-commerce
+                Echrini 
               </Typography>
               <DrawerComp />
             </>
@@ -39,15 +41,25 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
+                <Link to= "/" >
                 <Tab label="Home" />
-                <Tab label="categories" />
+                </Link>
+                <Link to="Create">
+                 <Tab label="Sell a product" />
+                 </Link>
               </Tabs>
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
+
+             <Button>
+             <Categories/>
+             </Button>
+
+        <Button sx={{ marginLeft: "auto" }} variant="contained" >
                 Login
               </Button>
               <Button sx={{ marginLeft: "10px" }} variant="contained">
                 SignUp
               </Button>
+            
             </>
           )}
         </Toolbar>
