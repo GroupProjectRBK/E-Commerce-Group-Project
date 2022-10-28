@@ -13,7 +13,6 @@ router.post("/login",login)
 router.post('/get-user',getUser)
 router.post('/logout',logout)
 //usersdashboard routes
-router.post("/postd")
 router.post("/postP",insertP)
 router.put("/modifie",updateP)
 router.delete('/delete',deleteP)

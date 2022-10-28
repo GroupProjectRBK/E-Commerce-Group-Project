@@ -11,7 +11,7 @@ const Posts = () => {
   }, []);
 
   async function fetchPosts() {
-    await fetch('http://localhost:4000/posts')
+    await fetch('http://localhost:3002/posts')
     .then(response => response.json())
     .then(json => setPosts(json))
     .then(setLoader(false))
