@@ -1,6 +1,5 @@
 import {BrowserRouter,Routes,Route } from "react-router-dom"
 import Posts from './components/pages/Posts'
-import Home from './components/'
 function App() {
   return (
     <div className="App">
