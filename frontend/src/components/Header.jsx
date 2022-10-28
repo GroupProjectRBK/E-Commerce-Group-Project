@@ -1,11 +1,16 @@
 import {Link, NavLink} from 'react-router-dom';
 
-const Footer = () => {
+const Header = () => {
   return (
-    <footer className='footer'>
+    <header>
       <div className='container'>
+        <div className='d-flex justify-content-between align-items-center'>
 
-        <nav className='d-flex justify-content-center'>
+          <div className='logo'>
+            <Link to='/' className='brand'>Echrini</Link>
+          </div>
+
+          <nav className='nav nav-pills'>
             <NavLink to='/' 
               className={(navData) => navData.isActive ? 'nav-link active' : 'nav-link'}
             >Home</NavLink>
@@ -18,13 +23,13 @@ const Footer = () => {
             <NavLink to='posts'
               className={(navData) => navData.isActive ? 'nav-link active' : 'nav-link'}
             >Posts</NavLink>
-        </nav>
-        <div className="copyrights">
-          &copy; 2022 <Link to="/"> Echrini </Link> - All Rights Reserved.
+          </nav>
+
         </div>
       </div>
-    </footer>
+    </header>
   )
 }
 
-export default Footer
+export default Header
+

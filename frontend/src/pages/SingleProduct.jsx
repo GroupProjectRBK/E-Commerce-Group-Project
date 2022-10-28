@@ -1,18 +1,18 @@
-import { Link, useNavigate , useParams, useLocation } from 'react-router-dom'
+import { Link, useNavigate  } from 'react-router-dom'
 
 
 const SingleProduct = () => {
 
   const navigate = useNavigate();
-  const { productId } = useParams();
-  const { pathname } = useLocation();
+  //const { productId } = useParams();
+  //const { pathname } = useLocation();
 
   
  
-  const singleProduct = PRODUCTS.find(product => product.id === parseInt(productId))
+  //const singleProduct = PRODUCTS.find(product => product.id === parseInt(productId))
   
 
-  const {name,category, price, image, description } = singleProduct
+  const {name, price, image, description } = SingleProduct
 
  
 
