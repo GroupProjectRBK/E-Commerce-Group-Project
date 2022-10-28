@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Posts = () => {
 
@@ -7,15 +8,10 @@ const Posts = () => {
   const [ loader, setLoader ] = useState(true);
 
   useEffect(() => {
-    fetchPosts();
+    axios.get('http://localhost:3002/postP').then((response)=>{setPosts(response.data)}).catch(error=>console.log(error))
   }, []);
 
-  async function fetchPosts() {
-    await fetch('http://localhost:3002/posts')
-    .then(response => response.json())
-    .then(json => setPosts(json))
-    .then(setLoader(false))
-  }
+ 
 
   return (
     <main className="posts">
